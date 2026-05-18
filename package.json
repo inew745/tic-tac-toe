@@ -16,6 +16,27 @@
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "typescript": "^5.0.0",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "react-scripts": "5.0.0"
   }
+}
+
+But we can omit react-scripts.
+
+Now tsconfig.
+
+<file path="tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
 }
